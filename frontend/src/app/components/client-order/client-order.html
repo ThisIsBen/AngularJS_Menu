@@ -1,0 +1,6 @@
+<h2>Order Dishes</h2>
+<div *ngFor="let dish of dishes">
+  <label>{{ dish.name }}</label>
+  <input type="number" [(ngModel)]="dish.count" min="0" />
+</div>
+<button (click)="submitOrder()">Submit Order</button>

@@ -1,0 +1,8 @@
+<h2>Live Orders</h2>
+<div *ngFor="let order of orders">
+  <p>New Order:</p>
+  <ul>
+    <li *ngFor="let item of order">{{ item.name }} x {{ item.count }}</li>
+  </ul>
+</div>
+
