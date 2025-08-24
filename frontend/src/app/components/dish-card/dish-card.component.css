@@ -1,0 +1,12 @@
+.dish-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem;
+  width: 250px;
+  text-align: center;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 0.5rem;
+}

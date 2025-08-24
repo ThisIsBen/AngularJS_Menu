@@ -8,6 +8,7 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app/app.routes';
 import { ClientOrderComponent } from './app/components/client-order/client-order';
 import { AdminDashboardComponent } from './app/components/admin-dashboard/admin-dashboard';
+import { SetupMenuComponent } from './app/components/dish-card/setup-menu.component';// import <app-dish-card>
 import { App } from './app/app';
 import { provideHttpClient } from '@angular/common/http';
 
@@ -23,7 +24,9 @@ bootstrapApplication(App, {
     provideRouter([
       { path: '', redirectTo: 'client-order', pathMatch: 'full' },
       { path: 'client-order', component: ClientOrderComponent },
-      { path: 'admin-dashboard', component: AdminDashboardComponent }
+      { path: 'setup-menu', component: SetupMenuComponent },
+      { path: 'admin-dashboard', component: AdminDashboardComponent },
+      
     ]),
     provideHttpClient() // ✅ This is the key fix
   ]

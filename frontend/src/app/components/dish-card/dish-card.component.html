@@ -1,0 +1,7 @@
+<div class="dish-card">
+  <h3>{{ dish.name }}</h3>
+  <p>{{ dish.description }}</p>
+  <img *ngIf="dish.imageUrl" [src]="dish.imageUrl" alt="{{ dish.name }}" />
+  <input type="file" (change)="onPhotoUpload($event)" />
+</div>
+
