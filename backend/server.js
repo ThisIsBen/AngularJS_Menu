@@ -15,6 +15,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Import API Routing 
+const orderRoutes = require('./routes/orderRoutes.js');
+app.use('/api/orders', orderRoutes);
+const path = require('path');
+app.use('/uploaded_Img', express.static(path.join(__dirname, 'uploaded_Img')));
+
+
+
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: { origin: '*' }
@@ -26,24 +34,8 @@ io.on('connection', (socket) => {
 app.set('socketio', io);
 
 
-
-// Import API Routing 
-const orderRoutes = require('./routes/orderRoutes.js');
-app.use('/api/orders', orderRoutes);
-const path = require('path');
-app.use('/uploaded_Img', express.static(path.join(__dirname, 'uploaded_Img')));
-
-
-
-
-
-
-
-
-
-
 // Start server
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
 

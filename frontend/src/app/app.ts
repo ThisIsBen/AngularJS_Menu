@@ -15,7 +15,7 @@ import { RouterModule } from '@angular/router';
   template: `
     <nav>
       <a routerLink="/client-order">Client Order</a> |
-      <a routerLink="/admin-dashboard">Admin Dashboard</a>
+      <a routerLink="/admin-dashboard">Admin Dashboard</a> |
       <a routerLink="/setup-menu">Dish Card</a>
     </nav>
     <hr />
